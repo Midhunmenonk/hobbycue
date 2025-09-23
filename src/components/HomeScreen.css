@@ -1,0 +1,150 @@
+/* Define custom colors */
+:root {
+  --hobbycue-purple: #8064A2;
+  --hobbycue-blue: #0096C8;
+  --hobbycue-light-purple: #F7F5F9;
+}
+
+.container my-5{
+  color: var(--hobbycue-light-purple);
+}
+.fw-bold{
+  font-family: poppins;
+  font-style: italic;
+  
+}
+
+.text-purple {
+  color: var(--hobbycue-purple);
+  
+}
+
+.text-blue {
+  color: var(--hobbycue-blue);
+  
+}
+
+/* Auth Tabs (Sign In / Join In) */
+.auth-tabs {
+  border-bottom: 2px solid #EBEDF0;
+}
+
+.auth-tab {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #939CA3;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+  margin-right: 2rem;
+  border-bottom: 2px solid transparent;
+}
+
+.auth-tab.active {
+  color: var(--hobbycue-purple);
+  border-bottom-color: var(--hobbycue-purple);
+}
+
+/* Social Login Buttons */
+.social-login .btn {
+  border-color: var(--hobbycue-purple);
+  color: #333;
+}
+.social-login .bi-google { color: #DB4437; }
+.social-login .bi-facebook { color: #4267B2; }
+
+/* Separator ("Or connect with") */
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #CED4DA;
+}
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #CED4DA;
+}
+.separator:not(:empty)::before {
+  margin-right: .25em;
+}
+.separator:not(:empty)::after {
+  margin-left: .25em;
+}
+
+/* Form Styling */
+.form-control {
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #6C757D;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: var(--hobbycue-purple);
+    border-color: var(--hobbycue-purple);
+}
+
+.forgot-password-link {
+    font-size: 0.9rem;
+    color: #6C757D;
+    text-decoration: none;
+}
+
+.btn-outline-dark {
+    border-color: var(--hobbycue-purple);
+    color: black;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--hobbycue-purple);
+    color: white;
+}
+
+
+.home-screen-container {
+  position: relative;
+  width: 100%; /* From your initial properties */
+  height: 678px;
+  margin:0%;
+  background-color: var(--hobbycue-light-purple);
+}
+
+.left-column-text {
+  position: absolute;
+  width: 707px;
+  height: 282px;
+  left: 100px;
+  top: 100px;
+}
+
+.left-column-illustration {
+  position: absolute;
+  width: 697.07px;
+  height: 216px;
+  left: 100px;
+  top: 462px;
+}
+
+.right-column-auth {
+  position: absolute;
+  width: 410px;
+  height: 434px;
+  left: 930px;
+  top: 103px;
+}
+
