@@ -1,0 +1,70 @@
+/* Define custom purple color variable */
+:root {
+  --hobbycue-purple: #8064A2;
+}
+
+/* Search Bar Styling */
+.navbar .form-control {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color: #ced4da; /* Default Bootstrap border color */
+}
+
+.navbar .btn-purple {
+  background-color: var(--hobbycue-purple);
+  color: white;
+  border: 1px solid var(--hobbycue-purple);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.navbar .btn-purple:hover {
+  background-color: #6a508b; /* A slightly darker purple for hover */
+  color: white;
+}
+
+/* Nav Link and Icon Styling */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #333; /* Dark grey for text */
+}
+
+.navbar-nav .purple-icon {
+  color: var(--hobbycue-purple);
+}
+
+/* Custom Dropdown Toggle Arrow Color */
+.navbar-nav .dropdown-toggle::after {
+    border-top-color: var(--hobbycue-purple);
+    border-bottom-color: var(--hobbycue-purple);
+}
+
+/* Sign In Button */
+.btn-outline-purple {
+  /* Properties from your layout specifications */
+  width: 112px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--hobbycue-purple); 
+  border-color: var(--hobbycue-purple);
+  opacity: 1;
+
+  /* Existing styles */
+  color: var(--hobbycue-purple);
+  font-weight: 600;
+  background-color: white;
+
+  
+}
+
+.btn-outline-purple:hover {
+  background-color: var(--hobbycue-purple);
+  color: white;
+  border-color: var(--hobbycue-purple);
+}
+
+/* General Navbar Adjustments */
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
