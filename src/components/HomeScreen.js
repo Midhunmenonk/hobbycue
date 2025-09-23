@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react'; // Import useState for managing the toggle
 import HobbyIllustration from '../assets/home image.png';
 import './HomeScreen.css';
 
 function HomeScreen() {
+  // State to track the active tab ('signIn' or 'joinIn')
+  const [activeTab, setActiveTab] = useState('signIn');
+
   return (
     <div className="home-screen-container">
       {/* Left Column: Text */}
@@ -25,9 +28,23 @@ function HomeScreen() {
 
       {/* Right Column: Sign In / Join In Form */}
       <div className="right-column-auth">
-        <div className="auth-tabs ">
-          <a href="#" className="auth-tab active">Sign In</a>
-          <a href="#" className="auth-tab">Join In</a>
+        <div className="auth-tabs">
+          {/* Sign In Tab */}
+          <a
+            href="#"
+            className={`auth-tab ${activeTab === 'signIn' ? 'active' : ''}`}
+            onClick={(e) => { e.preventDefault(); setActiveTab('signIn'); }}
+          >
+            Sign In
+          </a>
+          {/* Join In Tab */}
+          <a
+            href="#"
+            className={`auth-tab ${activeTab === 'joinIn' ? 'active' : ''}`}
+            onClick={(e) => { e.preventDefault(); setActiveTab('joinIn'); }}
+          >
+            Join In
+          </a>
         </div>
         
         <div className="social-login">
@@ -48,25 +65,45 @@ function HomeScreen() {
           <span style={{ color: "#000" }}>Or connect with</span>
         </div>
         
-        <form>
-          <div className="mb-3">
-            <input type="email" className="form-control" placeholder="Email" />
-          </div>
-          <div className="mb-3 password-wrapper">
-            <input type="password" className="form-control" placeholder="Password" />
-            <i className="bi bi-eye-fill password-icon"></i>
-          </div>
-          <div className="d-flex justify-content-between align-items-center mb-3">
-            <div>
-              <input type="checkbox" className="form-check-input" id="rememberMe" />
-              <label className="form-check-label ms-2" htmlFor="rememberMe">Remember me</label>
+        {/* Conditional rendering based on the active tab */}
+        {activeTab === 'signIn' ? (
+          // --- THIS IS YOUR ORIGINAL SIGN IN FORM (UNCHANGED) ---
+          <form>
+            <div className="mb-3">
+              <input type="email" className="form-control" placeholder="Email" />
             </div>
-            <a href="#" className="forgot-password-link">
-              <i className="bi bi-lock-fill me-1"></i> Forgot password?
-            </a>
-          </div>
-          <button type="submit" className=" btn-continue w-100">Continue</button>
-        </form>
+            <div className="mb-3 password-wrapper">
+              <input type="password" className="form-control " placeholder="Password" />
+              <i className="bi bi-eye-fill password-icon"></i>
+            </div>
+            <div className="d-flex justify-content-between align-items-center mb-3">
+              <div>
+                <input type="checkbox" className="form-check-input" id="rememberMe" />
+                <label className="form-check-label ms-2" htmlFor="rememberMe">Remember me</label>
+              </div>
+              <a href="#" className="forgot-password-link">
+                <i className="bi bi-lock-fill me-1"></i> Forgot password?
+              </a>
+            </div>
+            <button type="submit" className=" btn-continue w-100">Continue</button>
+          </form>
+        ) : (
+            // --- THIS IS THE NEW JOIN IN FORM ---
+            <form>
+              <div className="mb-3 ">
+                <input type="email" className="form-control" placeholder="Email" />
+              </div>
+              <div className="mb-3 password-wrapper">
+                <input type="password" className="form-control" placeholder="Password" />
+              <i className="bi bi-eye-fill password-icon"></i>
+              <small className="password-strength mt-2 ">Password strength</small>
+            </div>
+            <p className="terms-text mb-2 mt-4" >
+              By continuing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+            </p>
+            <button type="submit" className=" btn-agree-continue w-100">Agree and Continue</button>
+          </form>
+        )}
       </div>
     </div>
   );
