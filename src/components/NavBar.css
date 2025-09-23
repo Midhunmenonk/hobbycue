@@ -39,6 +39,24 @@
     border-bottom-color: var(--hobbycue-purple);
 }
 
+.explore-dropdown {
+  width: 220px;
+  /* Replace Bootstrap's box-shadow with the drop-shadow from your design */
+  box-shadow: none;
+  filter: drop-shadow(0px 0px 2px rgba(147, 156, 163, 0.36)) drop-shadow(0px 8px 12px rgba(147, 156, 163, 0.12));
+  margin-top: 0; /* Removes the default small gap */
+  border-radius: 8px;
+
+  border-top-left-radius: 0; /* Makes the top-left corner square */
+  border-top-right-radius: 0;
+  border: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.explore-dropdown li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* A subtle black line */
+}
+
 /* Sign In Button */
 .btn-outline-purple {
   /* Properties from your layout specifications */
@@ -46,14 +64,13 @@
   height: 40px;
   border-radius: 8px;
   border: 1px solid var(--hobbycue-purple); 
-  border-color: var(--hobbycue-purple);
   opacity: 1;
 
   /* Existing styles */
   color: var(--hobbycue-purple);
   font-weight: 600;
   background-color: white;
-
+  cursor: pointer;
   
 }
 

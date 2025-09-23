@@ -30,16 +30,16 @@ function NavBar() {
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
             {/* Explore Dropdown */}
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i className="bi bi-compass-fill me-2 purple-icon"></i>Explore
-              </a>
-              <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">People - Community</a></li>
-                <li><a className="dropdown-item" href="#">Places - Venues</a></li>
-                <li><a className="dropdown-item" href="#">Programs - Events</a></li>
-                <li><a className="dropdown-item" href="#">Products - Store</a></li>
-                <li><a className="dropdown-item" href="#">Blogs</a></li>
-              </ul>
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i className="bi bi-compass-fill me-2 purple-icon"></i>Explore
+                </a>
+                <ul className="dropdown-menu explore-dropdown">
+                    <li><a className="dropdown-item" href="#">People - Community</a></li>
+                    <li><a className="dropdown-item" href="#">Places - Venues</a></li>
+                    <li><a className="dropdown-item" href="#">Programs - Events</a></li>
+                    <li><a className="dropdown-item" href="#">Products - Store</a></li>
+                    <li><a className="dropdown-item" href="#">Blogs</a></li>
+                </ul>
             </li>
 
             {/* Hobbies Dropdown */}
@@ -47,10 +47,6 @@ function NavBar() {
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i className="bi bi-star-fill me-2 purple-icon"></i>Hobbies
               </a>
-               <ul className="dropdown-menu">
-                <li><a className="dropdown-item" href="#">Hobby 1</a></li>
-                <li><a className="dropdown-item" href="#">Hobby 2</a></li>
-              </ul>
             </li>
 
             {/* Icons */}
@@ -66,7 +62,7 @@ function NavBar() {
 
             {/* Sign In Button */}
             <li className="nav-item ms-lg-3">
-              <button className="btn btn-outline-purple" type="button">Sign In</button>
+              <button className=" btn-outline-purple" type="button">Sign In</button>
             </li>
           </ul>
         </div>
