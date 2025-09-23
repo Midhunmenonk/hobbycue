@@ -4,7 +4,6 @@ import './HomeScreen.css';
 
 function HomeScreen() {
   return (
-    // This container is now the positioning context for its children
     <div className="home-screen-container">
       {/* Left Column: Text */}
       <div className="left-column-text">

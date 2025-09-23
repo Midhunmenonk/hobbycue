@@ -1,0 +1,105 @@
+:root {
+  --hobbycue-purple: #8064A2;
+  --hobbycue-blue: #0096C8;
+  --hobbycue-green: #77933C;
+  --hobbycue-red: #C0504D;
+}
+
+.features-section {
+  padding: 100px 0;
+  background-color: white; /* Use white background to stand out from the page bg */
+}
+
+.feature-card {
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #EBEDF0; /* Light grey border */
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+
+  color: #333;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--hobbycue-purple); /* Highlight with purple border on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  border-color: transparent; /* Border becomes transparent when background fills */
+  
+  color: white;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-title-group i {
+  font-size: 1.75rem; /* Icon size */
+}
+
+/* Icon Colors */
+.icon-people { color: #8064A2; } /* Purple */
+.icon-place { color: #77933C; } /* Green */
+.icon-product { color: #C0504D; } /* Red */
+.icon-program { color: #0096C8; } /* Blue */
+
+
+.btn-outline-feature {
+  color: var(--hobbycue-purple);
+  border-color: var(--hobbycue-purple);
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-outline-feature:hover {
+  background-color: var(--hobbycue-purple);
+  color: white;
+}
+
+/* People Card Hover */
+.col-lg-6:nth-child(1) .feature-card:hover { /* Targets the first col-lg-6 */
+  background-color: var(--hobbycue-purple);
+}
+
+/* Place Card Hover */
+.col-lg-6:nth-child(2) .feature-card:hover { /* Targets the second col-lg-6 */
+  background-color: var(--hobbycue-green);
+}
+
+/* Product Card Hover */
+.col-lg-6:nth-child(3) .feature-card:hover { /* Targets the third col-lg-6 */
+  background-color: var(--hobbycue-red);
+}
+
+/* Program Card Hover */
+.col-lg-6:nth-child(4) .feature-card:hover { 
+  background-color: var(--hobbycue-blue);
+}
+
+/* --- Icon and Title Hover Styles --- */
+.feature-card:hover .card-title-group i,
+.feature-card:hover .card-title-group .card-title {
+  color: white !important; 
+}
+
+/* --- Button Hover Styles (when the card is hovered) --- */
+.feature-card:hover .btn-outline-feature {
+  background-color: white; /* Button background becomes white */
+  color: var(--hobbycue-purple); /* Button text becomes purple */
+  border-color: white; /* Button border becomes white */
+}
+
+.feature-card:hover .btn-outline-feature:hover {
+  background-color: #f0f0f0; /* Slightly different hover for the button itself */
+  color: var(--hobbycue-purple);
+  border-color: #f0f0f0;
+}
+
+
+
+
+
