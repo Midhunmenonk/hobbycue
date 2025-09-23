@@ -26,22 +26,27 @@ function HomeScreen() {
 
       {/* Right Column: Sign In / Join In Form */}
       <div className="right-column-auth">
-        <div className="auth-tabs mb-4">
+        <div className="auth-tabs ">
           <a href="#" className="auth-tab active">Sign In</a>
           <a href="#" className="auth-tab">Join In</a>
         </div>
         
         <div className="social-login">
-          <button className="btn btn-outline-secondary w-100 mb-2 d-flex align-items-center justify-content-center">
-            <i className="bi bi-google me-2"></i> Continue with Google
+          <button className="btn btn-outline-secondary mb-2 d-flex align-items-center justify-content-center">
+            <img
+              src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000"
+              alt="Google logo"
+              width="20"
+              height="20"
+            /> Continue with Google
           </button>
           <button className="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center">
             <i className="bi bi-facebook me-2"></i> Continue with Facebook
           </button>
         </div>
 
-        <div className="separator my-4">
-          <span>Or connect with</span>
+        <div className="separator">
+          <span style={{ color: "#000" }}>Or connect with</span>
         </div>
         
         <form>
@@ -61,7 +66,7 @@ function HomeScreen() {
               <i className="bi bi-lock-fill me-1"></i> Forgot password?
             </a>
           </div>
-          <button type="submit" className="btn btn-outline-dark w-100">Continue</button>
+          <button type="submit" className=" btn-continue w-100">Continue</button>
         </form>
       </div>
     </div>

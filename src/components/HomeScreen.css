@@ -26,7 +26,6 @@
 
 /* Auth Tabs (Sign In / Join In) */
 .auth-tabs {
-  border-bottom: 2px solid #EBEDF0;
 }
 
 .auth-tab {
@@ -57,7 +56,8 @@
   display: flex;
   align-items: center;
   text-align: center;
-  color: #CED4DA;
+  font-weight: bold;     
+  color: black;
 }
 .separator::before,
 .separator::after {
@@ -71,6 +71,7 @@
 .separator:not(:empty)::after {
   margin-left: .25em;
 }
+
 
 /* Form Styling */
 .form-control {
@@ -146,5 +147,80 @@
   height: 434px;
   left: 930px;
   top: 103px;
+
+  /* Flexbox Layout & Spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 0px;
 }
 
+/* src/components/HomeScreen.css */
+
+/* --- AUTHENTICATION FORM STYLES --- */
+
+/* Social Login Buttons (Google, Facebook) */
+.social-login .btn {
+  width: 410px;
+  height: 40px;
+  background: #F7F5F9;
+  border: 1px solid #8064A2;
+  border-radius: 8px;
+  justify-content: flex-start; /* Aligns content to the left */
+  padding-left: 24px; /* Uses the specified left padding */
+  gap: 1rem; /* A sensible gap between icon and text */
+}
+.social-login .bi-google { color:#4285F4; }
+.social-login .bi-facebook { color: #4267B2; }
+
+/* Separator ("Or connect with") */
+.separator {
+  width: 410px;
+  height: 16px; /* Height is controlled by line-height */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #CED4DA;
+}
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #CED4DA;
+}
+.separator:not(:empty)::before { margin-right: .25em; }
+.separator:not(:empty)::after { margin-left: .25em; }
+
+/* Email and Password Input Fields */
+.right-column-auth .form-control {
+  width: 100%; /* The container is 410px, so this fills it */
+  height: 40px;
+  background: #FFFFFF;
+  border: 1px solid #EBEDF0;
+  border-radius: 8px;
+  padding: 0 12px; /* A standard padding for input fields */
+}
+
+/* "Remember me" & "Forgot password" Row */
+.right-column-auth .d-flex.justify-content-between.align-items-center {
+    width: 410px;
+    height: 16px; /* Height is controlled by content font size */
+}
+
+/* Final "Continue" Button */
+.btn-continue {
+  width: 410px;
+  height: 40px;
+  background-color: white; /* Default background */
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.btn-continue:hover {
+  background-color:var(--hobbycue-purple);
+  color: white;
+}
