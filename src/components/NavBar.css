@@ -1,4 +1,3 @@
-
 /* Define custom purple color variable */
 :root {
   --hobbycue-purple: #8064A2;
@@ -86,3 +85,115 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+/* --- Responsive Mobile Navbar --- */
+@media (max-width: 991.98px) {
+  /* Hide all except logo, search, bell, hamburger */
+  .navbar .navbar-collapse,
+  .navbar .navbar-nav,
+  .navbar .navbar-toggler,
+  .navbar .btn-purple,
+  .navbar .form-control,
+  .navbar .dropdown,
+  .navbar .btn-outline-purple,
+  .navbar .nav-link,
+  .navbar .bi-cart-fill,
+  .navbar .bi-bookmark-fill,
+  .navbar .bi-star-fill,
+  .navbar .bi-compass-fill {
+    display: none !important;
+  }
+
+  .navbar-brand img {
+    width: 120px !important;
+    height: auto !important;
+    object-fit: contain;
+  }
+
+  .navbar {
+    min-height: 56px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: relative;
+  }
+
+  /* Show custom mobile icons container */
+  .d-lg-none {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--hobbycue-purple);
+    padding: 4px 8px;
+    display: inline-flex;
+    align-items: center;
+    z-index: 300;
+  }
+
+  /* Mobile search bar overlay */
+  .mobile-search-bar {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 100;
+    padding: 8px 16px;
+    border-bottom: 1px solid #eee;
+    animation: fadeIn 0.2s;
+  }
+  .mobile-search-bar input {
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+  }
+
+  /* Hamburger menu drawer */
+  .mobile-menu-drawer {
+    position: absolute;
+    top: 56px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    z-index: 200;
+    border-bottom: 1px solid #eee;
+    padding: 16px 0 8px 0;
+    animation: fadeIn 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  .mobile-menu-drawer .drawer-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  .mobile-menu-drawer .drawer-link:hover {
+    background: #f7f5f9;
+  }
+  .mobile-menu-drawer .btn-outline-purple {
+    border: 1.5px solid var(--hobbycue-purple);
+    color: var(--hobbycue-purple);
+    background: #fff;
+    border-radius: 6px;
+    padding: 6px 0;
+    font-weight: 600;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+}
+
+/* --- End Responsive Mobile Navbar --- */

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import HobbyCueLogo from '../assets/Hobbycue logo.png'; 
 import './NavBar.css'; 
@@ -66,6 +65,22 @@ function NavBar() {
               <button className=" btn-outline-purple" type="button">Sign In</button>
             </li>
           </ul>
+        </div>
+
+        {/* Mobile Icons - to the right of the logo */}
+        <div className="d-lg-none ms-auto d-flex align-items-center">
+          {/* Search Icon */}
+          <button className="icon-btn mobile-search-btn">
+            <i className="bi bi-search"></i>
+          </button>
+          {/* Bell Icon */}
+          <button className="icon-btn ms-2">
+            <i className="bi bi-bell-fill purple-icon"></i>
+          </button>
+          {/* Hamburger */}
+          <button className="icon-btn ms-2">
+            <i className="bi bi-list"></i>
+          </button>
         </div>
       </div>
     </nav>
