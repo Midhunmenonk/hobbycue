@@ -1,3 +1,4 @@
+
 import React from 'react';
 import HobbyCueLogo from '../assets/Hobbycue logo.png'; 
 import './NavBar.css'; 

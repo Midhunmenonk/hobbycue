@@ -1,0 +1,137 @@
+/* src/components/GetStarted.css */
+.get-started-section {
+  background-color: #F7FDFF; /* Light background color */
+  padding: 80px 0; /* Vertical padding */
+  position: relative; /* For "Go to top" positioning */
+  overflow-x: hidden; /* Prevents horizontal scroll if text is too long */
+}
+
+.get-started-content {
+  text-align: left;
+  max-width: 600px; /* Constrain text width */
+  margin-bottom: 30px; /* Space above illustration */
+}
+
+.get-started-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem; /* Large font size for desktop */
+  color: #000;
+  line-height: 1.2;
+  white-space: nowrap; /* --- KEY CHANGE: Prevents the text from wrapping --- */
+}
+
+.get-started-title .fw-bold {
+  font-family: 'Poppins', sans-serif; /* Ensure Poppins for italic bold */
+  font-style: italic;
+  font-weight: 600; /* As it looks bold */
+  color: #333; /* Darker grey for "Hobby" */
+}
+
+.get-started-title .text-blue {
+  color: var(--hobbycue-blue); /* Assuming you have --hobbycue-blue defined */
+}
+
+.btn-get-started {
+  background-color: var(--hobbycue-purple); /* Purple background */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 40px; /* Button padding */
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-get-started:hover {
+  background-color: #6a508b; /* Slightly darker purple on hover */
+}
+
+.get-started-illustration {
+  display: block; /* Remove extra space below image */
+  width: 100%; /* Ensure it's responsive */
+  height: auto;
+  margin-top: 50px; /* Spacing from button */
+}
+
+/* --- Go to Top Button & Text --- */
+.go-to-top-wrapper {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.go-to-top-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  color: #6D747A;
+  white-space: nowrap;
+}
+
+.btn-go-to-top {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  margin-left: 45px;
+  margin-bottom: 5px;
+}
+
+.btn-go-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-go-to-top i {
+  font-size: 1.2rem;
+  color: var(--hobbycue-purple);
+  font-weight: bold;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) { /* Tablets and Mobile */
+  .get-started-section {
+    padding: 40px 0;
+  }
+  .get-started-content {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .get-started-title {
+    font-size: 1.8rem; /* --- KEY CHANGE: Reduced font size for mobile --- */
+    margin-bottom: 20px;
+  }
+  .btn-get-started {
+    width: auto;
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+  .get-started-illustration {
+    margin-top: 30px;
+  }
+  .go-to-top-wrapper {
+      display: none !important;
+  }
+}
+
+@media (max-width: 575.98px) { /* Extra Small devices */
+    .get-started-title {
+        font-size: 1.2rem; /* --- KEY CHANGE: Further reduced font size for small phones --- */
+    }
+    .btn-get-started {
+        padding: 8px 25px;
+        font-size: 0.9rem;
+    }
+}

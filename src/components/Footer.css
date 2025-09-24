@@ -1,0 +1,145 @@
+/* src/components/Footer.css */
+
+:root {
+  --hobbycue-purple: #8064A2;
+  --hobbycue-blue: #0096C8;
+  --hobbycue-light-purple: #F7F5F9;
+  --hobbycue-grey-darker: #6D747A;
+}
+
+
+/* --- Main Footer Styling --- */
+.main-footer {
+  background-color: white; /* White background for the main footer area */
+  color: #333; /* Default text color */
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #EAEAEA; /* Subtle line above footer, if desired */
+}
+
+.main-footer .container {
+    max-width: 1240px; /* Constrain container width */
+}
+
+.footer-title {
+  font-weight: 700; /* Bold titles */
+  font-size: 1rem; /* Adjust font size as needed */
+  margin-bottom: 24px; /* Space below titles on desktop */
+}
+
+.footer-link {
+  color: #6D747A; /* Link color */
+  text-decoration: none;
+  font-size: 0.875rem; /* Smaller font size for links */
+  line-height: 28px; /* Spacing between links */
+}
+
+.footer-link:hover {
+  color: var(--hobbycue-purple); /* Purple on hover */
+}
+
+/* --- Social Media Icons --- */
+.social-media-icons {
+  display: flex;
+  gap: 16px; /* Space between icons */
+  flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #F7F5F9; /* Light purple background for icons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8064A2; /* Purple icon color */
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--hobbycue-purple);
+  color: white;
+}
+
+/* --- Invite Friends Section --- */
+.invite-friends-group .form-control {
+  border-radius: 8px 0 0 8px; /* Rounded left side */
+  border-color: #CED4DA;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.invite-friends-group .form-control::placeholder {
+    color: #CED4DA;
+}
+
+.btn-invite {
+  background-color: var(--hobbycue-purple);
+  color: white;
+  border: 1px solid var(--hobbycue-purple);
+  border-radius: 0 8px 8px 0; /* Rounded right side */
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-invite:hover {
+  background-color: #6a508b; /* Slightly darker purple on hover */
+  border-color: #6a508b;
+}
+
+/* --- Copyright Bar --- */
+.copyright-bar {
+  background-color: var(--hobbycue-light-purple); /* Light purple background */
+  color: #000;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+
+/* --- Mobile Specific Styles (Collapse Behavior) --- */
+@media (max-width: 991.98px) { /* Applies to tablets and mobile */
+  .main-footer .container {
+    padding-left: 15px; /* Add some padding for mobile view */
+    padding-right: 15px;
+  }
+
+  .footer-title {
+    margin-bottom: 0; /* Remove bottom margin for collapsible headers */
+  }
+
+  .footer-mobile-toggle {
+    border-bottom: 1px solid #EAEAEA; /* Separator line for mobile sections */
+    padding: 15px 0; /* Vertical padding */
+    cursor: pointer;
+  }
+
+  /* Style for the chevron icon in mobile toggle */
+  .footer-mobile-toggle .toggle-icon {
+    font-size: 1.2rem;
+    color: var(--hobbycue-purple);
+    transition: transform 0.3s ease;
+  }
+
+  /* Rotate icon when collapse is open */
+  .footer-mobile-toggle[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .collapse .list-unstyled {
+    padding-bottom: 15px; /* Padding after list content when expanded */
+    border-bottom: 1px solid #EAEAEA; /* Separator after expanded list */
+    margin-bottom: 0; /* Remove default ul margin */
+  }
+
+  /* Adjust spacing for social media and invite friends on mobile */
+  .social-media-icons {
+    justify-content: flex-start; /* Align left */
+    gap: 8px; /* Smaller gap for mobile icons */
+  }
+
+  .invite-friends-group {
+    width: 100%;
+  }
+}

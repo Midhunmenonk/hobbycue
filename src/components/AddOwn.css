@@ -1,0 +1,67 @@
+/* src/components/AddOwn.css */
+
+.add-own-section {
+  background-color: #F7FDFF; /* Light background color for the entire section */
+  padding: 80px 0; /* Vertical padding for spacing */
+}
+
+.add-own-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  padding: 40px;
+  max-width: 1240px; /* Width as seen in the image */
+  margin: 0 auto; /* Center the card */
+}
+
+.add-icon {
+  font-size: 2.5rem; /* Large icon size */
+  color: #0096C8; /* Blue color for the plus icon */
+}
+
+.add-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2rem; /* Size of "Add your own" title */
+  color: #333; /* Dark text color */
+}
+
+.add-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem; /* Adjust text size for readability */
+  line-height: 1.6;
+  color: #333; /* Dark text color */
+  max-width: 900px; /* Constrain width of description for better readability */
+}
+
+.btn-add-new {
+  background-color: white;
+  color: var(--hobbycue-purple); /* Purple text color */
+  border: 1px solid var(--hobbycue-purple); /* Purple border */
+  border-radius: 8px;
+  padding: 10px 30px; /* Button padding */
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-add-new:hover {
+  background-color: var(--hobbycue-purple);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .add-own-card {
+    padding: 20px;
+  }
+  .add-title {
+    font-size: 1.5rem;
+  }
+  .add-description {
+    font-size: 1rem;
+  }
+  .add-icon {
+    font-size: 2rem;
+  }
+}

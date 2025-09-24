@@ -2,6 +2,10 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import HomeScreen from './components/HomeScreen';
 import Features from './components/Features';
+import AddOwn from './components/AddOwn';
+import Testimonials from './components/Testimonials'; 
+import GetStarted from './components/GetStarted';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -9,7 +13,10 @@ function App() {
       <NavBar />
       <HomeScreen />
       <Features />
-      {/* The rest of your application content goes here */}
+      <AddOwn />
+      <Testimonials />
+      <GetStarted />
+      <Footer />
     </div>
   );
 }
