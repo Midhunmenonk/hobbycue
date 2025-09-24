@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; // Import useState for managing the toggle
+import React, { useState } from 'react'; 
 import HobbyIllustration from '../assets/home image.png';
 import './HomeScreen.css';
 

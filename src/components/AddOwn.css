@@ -1,6 +1,4 @@
-/* src/components/AddOwn.css */
 
-/* Define custom colors (if not already defined globally or in root) */
 :root {
   --hobbycue-purple: #8064A2;
   --hobbycue-blue: #0096C8;
@@ -8,8 +6,8 @@
 }
 
 .add-own-section {
-  background-color: #F7FDFF; /* Light background color for the entire section */
-  padding: 80px 0; /* Vertical padding for spacing */
+  background-color: #F7FDFF; 
+  padding: 80px 0;
 }
 
 .add-own-card {

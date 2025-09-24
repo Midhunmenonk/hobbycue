@@ -1,6 +1,6 @@
 import React from 'react';
-import './Testimonials.css'; // We'll create this CSS file next
-import testimonialProfilePic from '../assets/shubha-nagarajan.png'; // Placeholder for the profile image
+import './Testimonials.css'; 
+import testimonialProfilePic from '../assets/shubha-nagarajan.png'; 
 
 function Testimonials() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddOwn.css'; // We'll create this CSS file next
+import './AddOwn.css'; 
 
 function AddOwn() {
   return (

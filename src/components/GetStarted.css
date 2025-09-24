@@ -1,38 +1,36 @@
-/* src/components/GetStarted.css */
 .get-started-section {
-  background-color: #F7FDFF; /* Light background color */
-  padding: 80px 0; /* Vertical padding */
-  position: relative; /* For "Go to top" positioning */
-  overflow-x: hidden; /* Prevents horizontal scroll if text is too long */
+  background-color: #F7FDFF; 
+  padding: 80px 0; 
+  position: relative; 
+  overflow-x: hidden; 
 }
-
 .get-started-content {
   text-align: left;
-  max-width: 600px; /* Constrain text width */
-  margin-bottom: 30px; /* Space above illustration */
+  max-width: 600px; 
+  margin-bottom: 30px; 
 }
 
 .get-started-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 3rem; /* Large font size for desktop */
+  font-size: 3rem; 
   color: #000;
   line-height: 1.2;
-  white-space: nowrap; /* --- KEY CHANGE: Prevents the text from wrapping --- */
+  white-space: nowrap; 
 }
 
 .get-started-title .fw-bold {
-  font-family: 'Poppins', sans-serif; /* Ensure Poppins for italic bold */
+  font-family: 'Poppins', sans-serif; 
   font-style: italic;
-  font-weight: 600; /* As it looks bold */
-  color: #333; /* Darker grey for "Hobby" */
+  font-weight: 600; 
+  color: #333; 
 }
 
 .get-started-title .text-blue {
-  color: var(--hobbycue-blue); /* Assuming you have --hobbycue-blue defined */
+  color: var(--hobbycue-blue); 
 }
 
 .btn-get-started {
-  background-color: var(--hobbycue-purple); /* Purple background */
+  background-color: var(--hobbycue-purple); 
   color: white;
   border: none;
   border-radius: 8px;

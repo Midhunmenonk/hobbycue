@@ -1,4 +1,3 @@
-// src/components/GetStarted.js
 
 import React, { useEffect } from 'react';
 import GetStartedIllustration from '../assets/get-started-illustration.png';
