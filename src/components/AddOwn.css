@@ -1,5 +1,12 @@
 /* src/components/AddOwn.css */
 
+/* Define custom colors (if not already defined globally or in root) */
+:root {
+  --hobbycue-purple: #8064A2;
+  --hobbycue-blue: #0096C8;
+  --hobbycue-light-purple: #F7F5F9;
+}
+
 .add-own-section {
   background-color: #F7FDFF; /* Light background color for the entire section */
   padding: 80px 0; /* Vertical padding for spacing */
@@ -10,13 +17,13 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
   padding: 40px;
-  max-width: 1240px; /* Width as seen in the image */
+  max-width: 1240px; /* Desktop width */
   margin: 0 auto; /* Center the card */
 }
 
 .add-icon {
   font-size: 2.5rem; /* Large icon size */
-  color: #0096C8; /* Blue color for the plus icon */
+  color: var(--hobbycue-blue); /* Blue color for the plus icon */
 }
 
 .add-title {
@@ -24,6 +31,7 @@
   font-weight: 600;
   font-size: 2rem; /* Size of "Add your own" title */
   color: #333; /* Dark text color */
+  white-space: nowrap; /* Prevent title from wrapping on desktop */
 }
 
 .add-description {
@@ -31,7 +39,7 @@
   font-size: 1.1rem; /* Adjust text size for readability */
   line-height: 1.6;
   color: #333; /* Dark text color */
-  max-width: 900px; /* Constrain width of description for better readability */
+  max-width: 900px; /* Constrain width of description for better readability on desktop */
 }
 
 .btn-add-new {
@@ -50,18 +58,58 @@
   color: white;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* --- Responsive adjustments (for mobile and tablet) --- */
+@media (max-width: 991.98px) { /* Applies to screens smaller than large (lg) */
   .add-own-card {
-    padding: 20px;
+    padding: 20px; /* Reduced padding for smaller screens */
+    margin: 0 15px; /* Add horizontal margin to not touch screen edges */
+    max-width: 400px; /* Constrain card width on mobile */
+  }
+
+  /* Center the icon and title */
+  .add-own-card .d-flex { /* Targeting the flex container for icon and title */
+    justify-content: center;
+    margin-bottom: 20px !important; /* Adjust spacing below title/icon group */
+  }
+
+  .add-title {
+    font-size: 1.5rem; /* Smaller title on mobile */
+    white-space: normal; /* Allow title to wrap on mobile if needed, though it's short */
+  }
+
+  .add-icon {
+    font-size: 2rem; /* Slightly smaller icon on mobile */
+  }
+
+  .add-description {
+    font-size: 1rem; /* Slightly smaller description text */
+    text-align: center; /* Center align description text */
+    max-width: 100%; /* Allow description to take full width of card */
+    margin-bottom: 20px !important; /* Adjust spacing above button */
+  }
+
+  /* Center the "Add new" button */
+  .btn-add-new {
+    display: block; /* Make it a block element to take full width */
+    width: 100%; /* Full width within the card */
+    max-width: 200px; /* Optional: limit max width even if block */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    padding: 8px 20px; /* Adjust padding */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+}
+
+/* Further adjustments for very small screens if necessary */
+@media (max-width: 575.98px) {
+  .add-own-card {
+    padding: 15px;
   }
   .add-title {
-    font-size: 1.5rem;
-  }
-  .add-description {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .add-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-right: 10px !important;
   }
 }
